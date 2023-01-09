@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:party_today/app/components/styles/color_styles.dart';
 import 'package:party_today/app/components/ui/event_post.dart';
 import 'package:party_today/app/components/ui/filter_button.dart';
 
@@ -17,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           backgroundColor: Colors.black,
         ),
+        backgroundColor: context.colors.greylight,
         body: Column(
           children: [
             Center(
@@ -119,32 +121,54 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               ],
             ),
-            Column(
-              children: const [
-                Text(
-                  'Pesquisa por: Barzinho',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black87,
+            const Text(
+              'Pesquisa por: Barzinho',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: Colors.black87,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Flexible(
+              child: Container(
+                padding: const EdgeInsets.only(top: 10),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: const [
+                      EventPost(
+                        image: 'assets/images/boti.jpg',
+                        local: 'Botiquim 2009',
+                        date: '6 de Janeiro',
+                        initialTime: '22:00',
+                        finalTime: '2:00',
+                        event: 'Pagode do VB',
+                        tags: 'barzinho',
+                      ),
+                      EventPost(
+                        image: 'assets/images/bdz.jpg',
+                        local: 'Bar do Zé',
+                        date: '7 de Janeiro',
+                        initialTime: '22:00',
+                        finalTime: '2:00',
+                        event: 'Iara Styllus',
+                        tags: 'barzinho',
+                      ),
+                      EventPost(
+                        image: 'assets/images/barragem.jpg',
+                        local: 'Bar do Carlinhos',
+                        date: '10 de Janeiro',
+                        initialTime: '10:00',
+                        finalTime: '14:00',
+                        event: 'Desconto na Peixada',
+                        tags: 'barzinho',
+                      ),
+                    ],
                   ),
                 ),
-                SizedBox(
-                  height: 50,
-                ),
-                EventPost(
-                    image: 'assets/images/boti.jpg',
-                    local: 'Botiquim 2009',
-                    date: '6 de Janeiro'),
-                EventPost(
-                    image: 'assets/images/bdz.jpg',
-                    local: 'Bar do Zé',
-                    date: '7 de Janeiro'),
-                EventPost(
-                    image: 'assets/images/barragem.jpg',
-                    local: 'Bar do Carlinhos',
-                    date: '10 de Janeiro'),
-              ],
+              ),
             ),
           ],
         ));

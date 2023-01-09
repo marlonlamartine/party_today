@@ -17,6 +17,8 @@ class ColorStyles {
   }
 
   Color get primary => const Color(0xFFFF794F);
+  Color get greylight => const Color(0xFFE9EDF0);
+  Color get greydark => const Color(0xFFCAD2DA);
 }
 
 //extensão pra retornar as cores criadas de forma mais simples
