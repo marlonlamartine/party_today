@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:party_today/app/screens/home_screen.dart';
+import 'package:party_today/app/screens/login_screen.dart';
+import 'package:party_today/app/screens/register_screen.dart';
 
 import 'screens/splash_screen.dart';
 
@@ -20,6 +22,8 @@ class _PartyTodayAppState extends State<PartyTodayApp> {
       routes: {
         '/': (_) => const SplashScreen(),
         '/home': (_) => const HomeScreen(),
+        '/login': (_) => const LoginScreen(),
+        '/register': (_) => const RegisterScreen(),
       },
     );
   }

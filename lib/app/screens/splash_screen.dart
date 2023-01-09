@@ -1,6 +1,7 @@
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:party_today/app/components/ui/button.dart';
+import 'package:party_today/app/components/styles/button_styles.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -34,6 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).size.height * .15),
               child: Button(
+                style: context.buttonStyles.orangeButton,
                 label: 'Acessar',
                 width: MediaQuery.of(context).size.width * .9,
                 onPressed: () {

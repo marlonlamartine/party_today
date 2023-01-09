@@ -70,7 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
                             icon: const Icon(
                               Icons.person,
                               color: Colors.white,

@@ -4,14 +4,17 @@ class Button extends StatelessWidget {
   final String label;
   final double? width;
   final double? height;
+  final ButtonStyle style;
   final VoidCallback? onPressed;
 
-  const Button(
-      {super.key,
-      required this.label,
-      this.onPressed,
-      this.width,
-      this.height});
+  const Button({
+    super.key,
+    required this.label,
+    this.onPressed,
+    this.width,
+    this.height,
+    required this.style,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +23,7 @@ class Button extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          backgroundColor: const Color(0xFFFF794F),
-        ),
+        style: style,
         child: Text(label),
       ),
     );
